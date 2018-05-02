@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+  <title> myVue</title>
+  <script type="text/javascript" src="1.js"></script>
+</head>
+<style>
+  #app {
+    text-align: center;
+  }
+</style>
+
+<body>
+  <div id="app">
+    <form>
+      <input type="text" v-model="number">
+      <button type="button" v-click="increment">增加</button>
+    </form>
+      <h3 v-bind="number"></h3>
+  </div>
+</body>
+
+<script type="text/javascript">
+  var app = new MyVue({
+    el: '#app',
+    data: {
+      number: 0
+    },
+    methods:{
+      increment: function() {
+        this.number++;
+      }
+    }
+  });
+</script>
